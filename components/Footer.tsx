@@ -1,4 +1,5 @@
-import { Globe, Mail, MessageCircle, Share2 } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
+import { CALL_URL, CONTACT_PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/contact";
 
 const footerLinks = {
   Product: ["Features", "AI Agents", "Automation", "Campaigns", "CRM", "Analytics", "Pricing"],
@@ -7,19 +8,17 @@ const footerLinks = {
   Legal: ["Privacy Policy", "Terms of Service", "Cookie Policy", "GDPR"],
 };
 
-const socialLinks = [
-  { icon: Share2, href: "#", label: "Social" },
-  { icon: Globe, href: "#", label: "Website" },
-  { icon: MessageCircle, href: "#", label: "Community" },
-  { icon: Mail, href: "#", label: "Email" },
+const contactLinks = [
+  { icon: MessageCircle, href: WHATSAPP_URL, label: "WhatsApp" },
+  { icon: Phone, href: CALL_URL, label: "Call" },
 ];
 
 export function Footer() {
   return (
-    <footer className="border-t border-hairline bg-canvas pt-16 pb-8">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-6">
-          <div className="lg:col-span-2">
+    <footer className="border-t border-hairline bg-canvas pt-12 pb-8 sm:pt-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-8 sm:gap-12 lg:grid-cols-6">
+          <div className="col-span-2">
             <a href="#" className="flex items-center gap-2">
               <div className="flex h-8 w-8 items-center justify-center rounded-[6px] bg-primary">
                 <span className="text-sm font-bold text-white">K</span>
@@ -30,15 +29,23 @@ export function Footer() {
               The AI operating system for customer growth. Automate conversations,
               qualify leads, and scale engagement.
             </p>
-            <div className="mt-6 flex gap-3">
-              {socialLinks.map((social) => (
+            <a
+              href={CALL_URL}
+              className="mt-4 inline-block text-sm font-medium text-ink transition-colors hover:text-primary"
+            >
+              {CONTACT_PHONE_DISPLAY}
+            </a>
+            <div className="mt-4 flex gap-3">
+              {contactLinks.map((link) => (
                 <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="flex h-9 w-9 items-center justify-center rounded-[6px] border border-hairline text-ink-mute transition-colors hover:border-ink-mute-2 hover:text-ink"
+                  key={link.label}
+                  href={link.href}
+                  target={link.label === "WhatsApp" ? "_blank" : undefined}
+                  rel={link.label === "WhatsApp" ? "noopener noreferrer" : undefined}
+                  aria-label={link.label}
+                  className="flex h-9 w-9 items-center justify-center rounded-[6px] border border-hairline text-ink-mute transition-colors hover:border-primary/30 hover:text-primary"
                 >
-                  <social.icon size={16} />
+                  <link.icon size={16} />
                 </a>
               ))}
             </div>
@@ -63,7 +70,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-hairline pt-8 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-hairline pt-8 text-center sm:mt-16 sm:flex-row sm:text-left">
           <p className="text-xs text-ink-mute">
             &copy; {new Date().getFullYear()} Korvexa. All rights reserved.
           </p>

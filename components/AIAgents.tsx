@@ -66,15 +66,15 @@ export function AIAgents() {
   const current = capabilities[active];
 
   return (
-    <section id="ai-agents" className="bg-canvas-soft py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="ai-agents" className="bg-canvas-soft py-14 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="AI Agents"
           title="Intelligent agents that work while you sleep"
           description="Deploy AI agents that qualify leads, book appointments, resolve support queries, and automate follow-ups — all through natural conversations."
         />
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:gap-12">
+        <div className="mt-10 grid gap-6 sm:mt-16 lg:grid-cols-2 lg:gap-12">
           <FadeIn>
             <div className="space-y-3">
               {capabilities.map((cap, i) => (

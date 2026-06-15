@@ -37,8 +37,8 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="resources" className="py-20 lg:py-28">
-      <div className="mx-auto max-w-3xl px-6 lg:px-8">
+    <section id="resources" className="py-14 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="FAQ"
           title="Frequently asked questions"
@@ -51,7 +51,7 @@ export function FAQ() {
               <div className="overflow-hidden rounded-lg border border-hairline bg-canvas">
                 <button
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="flex w-full items-center justify-between px-6 py-4 text-left"
+                  className="flex w-full items-center justify-between px-4 py-4 text-left sm:px-6"
                 >
                   <span className="text-sm font-semibold text-ink">{faq.question}</span>
                   <ChevronDown
@@ -69,7 +69,7 @@ export function FAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      <div className="border-t border-hairline px-6 py-4">
+                      <div className="border-t border-hairline px-4 py-4 sm:px-6">
                         <p className="text-sm leading-relaxed text-ink-mute">{faq.answer}</p>
                       </div>
                     </motion.div>

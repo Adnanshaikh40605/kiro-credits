@@ -105,8 +105,8 @@ function KanbanPreview() {
 
 export function CRM() {
   return (
-    <section id="crm" className="py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="crm" className="py-14 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="CRM"
           title="A CRM built for conversational sales"

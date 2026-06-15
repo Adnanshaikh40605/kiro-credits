@@ -35,7 +35,7 @@ export function Header() {
           : "bg-transparent"
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:h-[72px] lg:px-8">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:h-[72px] lg:px-8">
         <a href="#" className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-[6px] bg-primary">
             <span className="text-sm font-bold text-white">K</span>
@@ -81,7 +81,7 @@ export function Header() {
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden border-b border-hairline bg-canvas lg:hidden"
           >
-            <nav className="flex flex-col gap-1 px-6 py-4">
+            <nav className="flex flex-col gap-1 px-4 py-4 sm:px-6">
               {navLinks.map((link) => (
                 <a
                   key={link.href}

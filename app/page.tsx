@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { TrustedBy } from "@/components/TrustedBy";
 import { Features } from "@/components/Features";
 import { AIAgents } from "@/components/AIAgents";
 import { WhatsAppAutomation } from "@/components/WhatsAppAutomation";
@@ -9,10 +8,10 @@ import { CRM } from "@/components/CRM";
 import { Analytics } from "@/components/Analytics";
 import { Pricing } from "@/components/Pricing";
 import { WhyKorvexa } from "@/components/WhyKorvexa";
-import { Testimonials } from "@/components/Testimonials";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
+import { ContactWidgets } from "@/components/ContactWidgets";
 
 export default function Home() {
   return (
@@ -20,7 +19,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <TrustedBy />
         <Features />
         <AIAgents />
         <WhatsAppAutomation />
@@ -29,11 +27,11 @@ export default function Home() {
         <Analytics />
         <Pricing />
         <WhyKorvexa />
-        <Testimonials />
         <FAQ />
         <FinalCTA />
       </main>
       <Footer />
+      <ContactWidgets />
     </>
   );
 }

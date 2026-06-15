@@ -53,19 +53,19 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="pricing" className="py-14 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="Pricing"
           title="Plans that scale with your growth"
           description="Start free, upgrade as you grow. Every plan includes core AI agents, inbox, and CRM."
         />
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-3">
           {plans.map((plan, i) => (
             <FadeIn key={plan.name} delay={i * 0.1}>
               <div
-                className={`flex h-full flex-col rounded-lg border p-8 ${
+                className={`flex h-full flex-col rounded-lg border p-5 sm:p-8 ${
                   plan.featured
                     ? "border-primary/30 bg-canvas-night text-white shadow-[var(--shadow-lg)]"
                     : "border-hairline bg-canvas"

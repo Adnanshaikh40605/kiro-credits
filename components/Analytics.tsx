@@ -83,8 +83,8 @@ function ChartMockup() {
 
 export function Analytics() {
   return (
-    <section id="analytics" className="bg-canvas-soft py-20 lg:py-28">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="analytics" className="bg-canvas-soft py-14 sm:py-20 lg:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           label="Analytics"
           title="Turn engagement data into growth decisions"
